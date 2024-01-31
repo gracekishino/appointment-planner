@@ -15,7 +15,7 @@ export const ContactsPage = ({ contacts, onAdd }) => {
     if (contacts.find(contact => contact.name === name)) {
       setDuplicateName(true);
     }
-  },[name]);
+  },[contacts, name]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,11 +30,6 @@ export const ContactsPage = ({ contacts, onAdd }) => {
       setEmail('');
     }
   };
-
-  /*
-  Using hooks, check for contact name in the 
-  contacts array variable in props
-  */
 
   return (
     <div>
