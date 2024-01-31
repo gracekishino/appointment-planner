@@ -12,7 +12,7 @@ export const ContactsPage = ({ contacts, onAdd }) => {
   
   useEffect(() => {
     // check if name is in contacts
-    if (contacts.find(contact => contact.name == name)) {
+    if (contacts.find(contact => contact.name === name)) {
       setDuplicateName(true);
     }
   },[name]);
